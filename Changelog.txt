@@ -1,4 +1,18 @@
-September 28, 2011 | Version 0.99 | Pre-release
-	
-	Fixed all obvious bugs.
+October 7, 2011 | Version 0.9999 | Pre-release
+	Fixed map voting not working when a player joins while map voting is in progress.
+	Made it more difficult to farm money.
 
+October 4, 2011 | Version 0.999 | Pre-release
+
+	Spawn points no longer provide spawn protection.
+	Made Mobile Spawn Points count as an enemy structure to help prevent spawn blocking.
+	Spawn points blow up or stop building props that are building that are in the way of a player spawning.
+	Fixed bug where it wouldn't notify the player that their spawns were obstructed unless they had five spawnpoints and were all obstructed.
+	Fixed bug where spawn points don't work after being obstructed, even after removing the obstruction(wasn't clearing the table of unsuitable spawnpoints).
+
+October 2, 2011 | Version 0.99 | Pre-release
+	
+	Added Spawn Timer to Death Screen.
+	Fixed Crooked P228 Sights.
+	Doubled default money earned per minute.
+	Made Toolgun have run angles.
