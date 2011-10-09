@@ -14,9 +14,7 @@ Installation:
 3. Download the official maps and put them in your server's garrysmod/maps directory.
 	URL: http://stronghold.googlecode.com/files/sh_maps.zip
 	
-4. 
-
-5. Learn how to set up fast download so people can get into your server quickly.
+4. Learn how to set up fast download so people can get into your server quickly.
 -------------------------------------------------------------------------------------------
 
 Credits:
