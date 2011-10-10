@@ -1,3 +1,8 @@
+October 9, 2011 | Version 0.9999 | Pre-release
+	Fixed team menu showing an "ERROR" for the urban counter terrorist model.
+	Fixed the AK-47 sight being too high.
+	The MAC 10 now has actual iron sights.
+	
 October 7, 2011 | Version 0.9999 | Pre-release
 	Fixed map voting not working when a player joins while map voting is in progress.
 	Made it more difficult to farm money.
