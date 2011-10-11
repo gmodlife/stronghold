@@ -4,9 +4,7 @@
 
 Installation:
 -------------------------------------------------------------------------------------------
-1. Put the folder this Readme.txt is in into your server's garrysmod/gamemodes directory.
-	This is only if you haven't created a folder called stronghold in your gamemodes folder
-	already and downloaded this to it. Which is what you should have done.
+1. Put the folder the info.txt is in into your server's garrysmod/gamemodes directory.
 
 2. Copy the server.cfg to your server's garrysmod/cfg directory.
 	This will automatically set stronghold to it's optimal gameplay settings.
@@ -15,6 +13,9 @@ Installation:
 	URL: http://stronghold.googlecode.com/files/sh_maps.zip
 	
 4. Learn how to set up fast download so people can get into your server quickly.
+
+5. It's recomended that your max player limit is around 16 players, but you're probably
+	going to be a faggot and make your server like 128 players or something so whatever.
 -------------------------------------------------------------------------------------------
 
 Credits:
