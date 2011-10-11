@@ -1,5 +1,6 @@
 --[[---------------------------------------------------]]--
 --[[--Welcome to RoaringCow's Stronghold weapon base!--]]--
+--[[----I realize it's a fuckheap but I don't care.----]]--
 --[[---------------------------------------------------]]--
 if (SERVER) then
 	AddCSLuaFile("shared.lua")
