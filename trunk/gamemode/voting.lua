@@ -29,8 +29,6 @@ function GM:LoadMapList()
 
 sh_map_finala15;Valley Compound [Twitch/RoaringCow]
 sh_lockdown;Lockdown [Helio-G/RoaringCow]
-sh_yard_09;Refinery [Twitch/RoaringCow]
-sh_hillcompound;Hill Compound [MatDragon]
 ]] )
 self.MapList["dm_lockdown"] = { map="dm_lockdown", name="Lockdown [VaLVE]" }
 self.MapList["dm_overwatch"] = { map="dm_overwatch", name="Overwatch [VaLVE]" }
