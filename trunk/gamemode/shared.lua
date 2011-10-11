@@ -44,7 +44,8 @@ GM.SecondaryWeapons["weapon_sh_five-seven"] =  { type="pistol", name="FN Five-Se
 GM.SecondaryWeapons["weapon_sh_glock18"] =     { type="pistol", name="Glock 18", price=999.99, model="models/weapons/w_pist_glock18.mdl" }
 GM.SecondaryWeapons["weapon_sh_p228"] =        { type="pistol", name="SIG-SAUER P228", price=0, model="models/weapons/w_pist_p228.mdl" }
 GM.SecondaryWeapons["weapon_sh_tmp"] =         { type="smg1", name="STEYR TMP", price=1599.99, model="models/weapons/w_smg_tmp.mdl", auto=true }
-GM.SecondaryWeapons["weapon_sh_mac10"] =       { type="smg1", name="MAC-10 .380", price=1299.99, model="models/weapons/w_smg_mac10.mdl", auto=true }
+GM.SecondaryWeapons["weapon_sh_mac10-45"] =       { type="smg1", name="MAC-10 .45", price=1699.99, model="models/weapons/w_smg_mac10.mdl", auto=true }
+GM.SecondaryWeapons["weapon_sh_mac11-380"] =       { type="smg1", name="MAC-11 .380", price=1299.99, model="models/weapons/w_smg_mac10.mdl", auto=true }
 GM.SecondaryWeapons["weapon_sh_pumpshotgun2"] = { type="buckshot", name="M3 Super 90", price=249.99, model="models/weapons/w_shot_m3super90.mdl", offset=Vector(-8,0,-5), fov=70 }
 
 GM.Explosives = {}
