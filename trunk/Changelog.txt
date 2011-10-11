@@ -1,4 +1,4 @@
-October 9, 2011 | Version 0.9999 | Pre-release
+October 9, 2011 | Version 0.99999 | Pre-release
 	Fixed team menu showing an "ERROR" for the urban counter terrorist model.
 	Fixed the AK-47 sight being too high.
 	The MAC 10 now has actual iron sights.
