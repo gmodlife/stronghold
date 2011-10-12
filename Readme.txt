@@ -37,4 +37,4 @@ The last thing we want to see in the server list is:
 "[FAGS] Stronghold fixed weapons with shitty muzzle heat wave effects and unmanagable unrealistic recoil bullshit"
 
 We put a lot of work into making the game balanced. So, don't do any of that. Thank you.
----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------- 
