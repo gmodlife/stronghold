@@ -1,3 +1,6 @@
+October 11, 2011 | Version 1.01
+	Added the MAC 11.
+
 October 9, 2011 | Version 0.99999 | Pre-release
 	Fixed team menu showing an "ERROR" for the urban counter terrorist model.
 	Fixed the AK-47 sight being too high.
