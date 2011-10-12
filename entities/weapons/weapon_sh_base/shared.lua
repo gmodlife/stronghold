@@ -348,6 +348,8 @@ end
 function SWEP:GetViewModelPosition( pos, ang )
 	if (not self.IronSightsPos) then return pos, ang 
 	end
+	local scale = math.Clamp((CurTime() - self.Recoil)*20, -5, 1 )
+	local scale2 = math.Clamp((CurTime() - self.Recoil)*10, -0, 2 )
 
 	local bIron = self.bInIronSight
 	if self.Owner:KeyDown( IN_FORWARD| IN_BACK | IN_MOVELEFT | IN_MOVERIGHT ) and self.Owner:KeyDown( IN_SPEED ) then
@@ -414,8 +416,6 @@ function SWEP:GetViewModelPosition( pos, ang )
 	end
 
 	local Offset= self.IronSightsPos
-	local scale = math.Clamp((CurTime() - self.Recoil)*20, -5, 1 )
-	local scale2 = math.Clamp((CurTime() - self.Recoil)*10, -0, 2 )
 	
 	if (self.IronSightsAng) then
 		ang = ang 
