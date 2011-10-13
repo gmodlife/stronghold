@@ -45,8 +45,7 @@ SWEP.RSlide					= 0.005
 SWEP.LastAmmoCount 			= 0
 SWEP.FreeFloatHair			= 0
 SWEP.IronsightCorrection 	= 0
-
-SWEP.IronSightsPos = Vector (5.9896, 0.1, 0.8974)
-SWEP.IronSightsAng = Vector (2.9437, 1.3444, 2.8194)
+SWEP.IronSightsPos = Vector (6.065, 0.1, 0.85)
+SWEP.IronSightsAng = Vector (3.1, 1.45, 2.7)
 
 

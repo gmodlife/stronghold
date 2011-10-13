@@ -184,6 +184,9 @@ function SWEP:IronSight()
 	return end
 		if self.Owner:KeyDown(IN_ATTACK2) and !self:GetIronsights() and !self.Owner:KeyDown(IN_USE) then	
 			if SERVER then self.Owner:SetFOV( self.Zoom, 0.2 ) end
+			if self.RMod == 1 then 
+				self.Weapon:SendWeaponAnim( ACT_VM_IDLE )
+				self.Owner:GetViewModel():SetPlaybackRate( 0 )end
 			self:SetIronsights( true, self.Owner )
 		elseif !self.Owner:KeyDown(IN_ATTACK2) and self:GetIronsights() then
 			if SERVER then self.Owner:SetFOV( 0, 0.2 ) end
@@ -261,25 +264,11 @@ function SWEP:Reload()
 		self:SetIronsights( false )
 		self.Owner:AddStatistic( "Reloads", 1 )
 	
-	if self.PrintName == "M4A2" then
-		self.IronSightsPos = Vector (6, 0.1, 0.8834)
-		self.IronSightsAng = Vector (2.7, 1.35, 3.3863)
-	end
-	
-	if self.PrintName == "STEYR TMP" then
-		self.IronSightsPos = Vector (5.3779, 0.1, 1.7546)
-		self.IronSightsAng = Vector (5.3899, -0.4674, 1.8796)
-	end
-	
 	if self.PrintName == "SIG-SAUER P228" then
 		self.IronSightsPos = Vector (4.6978, 0, 2.8949)
 		self.IronSightsAng = Vector (-0.585, -0.6464, 0)
 	end
-	
-	if self.Mac10 then
-		self.IronSightsPos = Vector (6.97, 0.1, 2.9021)
-		self.IronSightsAng = Vector (0.7379, 5.45, 7.5801)
-	end
+
 end
 
 function SWEP:Deploy()
@@ -290,26 +279,11 @@ function SWEP:Deploy()
 	self.Reloadaftershoot = CurTime() + 1
 	self:SetIronsights( false )
 	self.Weapon:SetNextPrimaryFire( CurTime() + 1 )
-
-	if self.PrintName == "M4A2" then
-		self.IronSightsPos = Vector (5.9896, 0.1, 0.8974)
-		self.IronSightsAng = Vector (2.9, 1.3444, 2.8194)
-	end  
-	
-	if self.PrintName == "STEYR TMP" then
-		self.IronSightsPos = Vector (4.918, 0.1001, 3.2105)
-		self.IronSightsAng = Vector (-2.0447, 0.5013, -5.6421)
-	end
 	
 	if self.PrintName == "SIG-SAUER P228" then
 		self.IronSightsPos = Vector (4.7705, 0, 2.9103)
 		self.IronSightsAng = Vector (-0.5696, 0.1092, 0)
 	end
-	
-	if self.Mac10 then
-		self.IronSightsPos = Vector (6.98, 0.1, 2.9021)
-		self.IronSightsAng = Vector (0.7986, 5.32, 7.5801)
-    end
 	
 	return true
 end
@@ -479,7 +453,7 @@ end
 
 function SWEP:CSShootBullet(dmg, recoil, numbul, cone)
 	if self.Sprinting or self.Reloading then return end
-
+	
 	numbul 		= numbul or 1
 	cone 			= cone or 0.01
 	local bullet 	= {}
@@ -498,34 +472,16 @@ function SWEP:CSShootBullet(dmg, recoil, numbul, cone)
 	self.Owner:MuzzleFlash()
 	self.Owner:SetAnimation(PLAYER_ATTACK1)
 	
-	if self:GetIronsights() and self.RMod == 1 and !self.Sniper and !self.Mac10 then
-			self.Weapon:SendWeaponAnim( ACT_VM_IDLE )
-		self.Owner:GetViewModel():SetPlaybackRate( 0 )
-	elseif self:GetIronsights() and self.RMod == 0 then
+	if self:GetIronsights() and self.RMod == 0 then
 		self.Weapon:SendWeaponAnim(ACT_VM_PRIMARYATTACK)
 		self.Owner:GetViewModel():SetPlaybackRate( self.IronCycleSpeed )
 	end
-	if !self.Mac10 then
 		if !self:GetIronsights() or self.Sniper then
 			self:SendWeaponAnim(ACT_VM_PRIMARYATTACK)
 			self.Owner:GetViewModel():SetPlaybackRate( self.CycleSpeed )
-		end
-	end
-	if self.Mac10 and !self:GetIronsights() then
-		self:SendWeaponAnim(ACT_VM_IDLE)
-		self:MacShoot()
-		self.IronSightsPos = Vector (6.85, 0.1, 2.7811)
-		self.IronSightsAng = Vector (1.3858, 4.58, 7.4593)
+
 	end
 	--Setting new ironsight angles because of retardedly animated models. Apparently valve employs animators that have never heard of shift+dragging keyframes.
-	if self.PrintName == "M4A2" then 
-		self.IronSightsPos = Vector (6.065, 0.1, 0.85)
-		self.IronSightsAng = Vector (3.1, 1.45, 2.7)
-	end
-	if self.PrintName == "STEYR TMP" then
-		self.IronSightsPos = Vector (5.234, 0.1, 2.5)
-		self.IronSightsAng = Vector (0.6531, -0.0248, 0)
-	end	
 	if self.PrintName == "SIG-SAUER P228" then
 		self.IronSightsPos = Vector (4.7648, -0.0028, 2.9876)
 		self.IronSightsAng = Vector (-0.6967, 0.0241, -0.0391)

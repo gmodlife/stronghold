@@ -89,9 +89,12 @@ function SWEP:Think()
 			if self.Throw < CurTime() then
 				self.Primed = 2
 				self.CookTime = CurTime() - self.Throw -- THIS GETS THE TIME BETWEEN WHEN YOU STARTED COOKING AND NOW
-				self.Throw = CurTime() + 0.05	
+				self.Throw = CurTime() + 0.5	
+				self.Weapon:SendWeaponAnim( ACT_VM_THROW )
+				self.Owner:SetAnimation( PLAYER_ATTACK1 )
 				timer.Simple( 0.3, function()
 				if !IsValid( self ) then return end
+
 					self:ThrowGrenade( false )
 				end)
 			end
@@ -99,7 +102,9 @@ function SWEP:Think()
 		elseif !self.Owner:KeyDown( IN_ATTACK2 ) and !self.PrimaryThrow then -- Short throw
 			if self.Throw < CurTime() then
 				self.Primed = 2
-				self.Throw = CurTime() + 0.05
+				self.Throw = CurTime() + 0.5
+				self.Weapon:SendWeaponAnim( ACT_VM_THROW )
+				self.Owner:SetAnimation( PLAYER_ATTACK1 )
 				timer.Simple( 0.3, function()
 				if !IsValid( self ) then return end
 					self:ThrowGrenade( true )
@@ -114,11 +119,6 @@ function SWEP:Think()
 		end
 		self.Primed = 0
 		self.CookTime = 0
-	end
-
-	if self.Owner:KeyReleased(IN_ATTACK | IN_ATTACK2) then
-		self.Weapon:SendWeaponAnim( ACT_VM_THROW )
-		self.Owner:SetAnimation( PLAYER_ATTACK1 )
 	end
 end
 

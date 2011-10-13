@@ -40,6 +40,8 @@ SWEP.RRise					= -0.001
 SWEP.SlideLocks				= 0
 SWEP.FreeFloatHair			= 0
 SWEP.SMG					= true
+SWEP.IronSightsPos = Vector (5.234, 0.1, 2.5)
+SWEP.IronSightsAng = Vector (0.6531, -0.0248, 0)
 
 
 
