@@ -1,3 +1,6 @@
+October 20, 2011 | Version 1.02
+	Removed the suggestion tab left over from beta.
+
 October 11, 2011 | Version 1.01
 	Added the MAC 11.
 

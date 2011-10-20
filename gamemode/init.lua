@@ -22,7 +22,6 @@ include( "spawnmenu.lua" )
 include( "playersounds.lua" )
 include( "voting.lua" )
 include( "gbux.lua" )
-include( "sv_Sug.lua" ) 
 --include( "treelights.lua" )
 
 AddCSLuaFile( "shared.lua" )

@@ -38,9 +38,6 @@ function PANEL:Init()
 
 	self.VotingPanel = vgui.Create( "sh_votingpanel", self )
 	self.Sections:AddSheet( "Map Voting", self.VotingPanel, "gui/silkicons/application_view_tile" )
-	
-	self.SuggestionPanel = vgui.Create( "sh_suggestionpanel", self )
-	self.Sections:AddSheet( "Bugs / Suggestions", self.SuggestionPanel, "gui/silkicons/exclamation" )
 
 	self.DonatePanel = vgui.Create( "sh_donatepanel", self )
 	self.Sections:AddSheet( "Donate", self.DonatePanel, "gui/silkicons/add" )
