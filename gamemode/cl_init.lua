@@ -7,6 +7,8 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-
 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 
 ---------------------------------------------------------]]
+
+include( "glon.lua" ) -- This is manually added to prevent a Linux issue because Garry...
 require( "datastream" )
 
 --[[-------------------------------------------------------
