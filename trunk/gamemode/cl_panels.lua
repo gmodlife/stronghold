@@ -7,7 +7,15 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-
 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 
 ---------------------------------------------------------]]
+
 require( "datastream" )
+
+-- There is an inconsistency in the DMultiChoice derma file on the Linux side compared to Windows
+-- This fixes it:
+DMultiChoice.SetTextOld = DMultiChoice.SetText
+function DMultiChoice.SetText( self, text )
+	DMultiChoice.SetTextOld( self, text or "" )
+end
 
 -- Options menu
 GM.OptionsFrame = nil
