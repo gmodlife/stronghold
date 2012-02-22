@@ -19,7 +19,7 @@ function PANEL:Init()
 	
 	self.HelpPanel = vgui.Create( "Panel", self )
 	local html = vgui.Create( "HTML", self.HelpPanel )
-	html:OpenURL( "http://www.riotservers.net/info" )
+	html:OpenURL( "http://g4p.org/stronghold/index.php" )
 	html:StartAnimate( 1000/30 )
 	local controls = vgui.Create( "DHTMLControls", self.HelpPanel )
 	controls:SetHTML( html )
